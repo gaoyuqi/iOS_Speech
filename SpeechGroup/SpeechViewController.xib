@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeechViewController">
+            <connections>
+                <outlet property="inputTextView" destination="mKK-99-oQ7" id="IXV-qN-HUp"/>
+                <outlet property="realTimeTextView" destination="flU-jg-WXo" id="J57-OY-nwV"/>
+                <outlet property="startSpeechingButton" destination="xZD-KP-jF1" id="zSJ-we-azA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i1-k0-pSB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="kU6-zB-Ait"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請說出你要輸入的文字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Je-fS9">
+                    <rect key="frame" x="53" y="60" width="268" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="268" id="9LF-4R-3co"/>
+                        <constraint firstAttribute="height" constant="52" id="TXx-t6-mcA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即時翻譯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zQ-L8-HMX">
+                    <rect key="frame" x="32" y="120" width="311" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="sci-XF-N42"/>
+                        <constraint firstAttribute="width" constant="311" id="xa5-HP-s6K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="請說出你要輸入的文字" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="flU-jg-WXo">
+                    <rect key="frame" x="32" y="149" width="311" height="189"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="189" id="evA-id-yZt"/>
+                        <constraint firstAttribute="width" constant="311" id="trS-dE-DPn"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束語音並翻譯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctn-li-fx1">
+                    <rect key="frame" x="32" y="344" width="311" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="311" id="1rA-ZK-Mqo"/>
+                        <constraint firstAttribute="height" constant="21" id="21i-nf-iYD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="請說出你要輸入的文字" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-99-oQ7">
+                    <rect key="frame" x="32" y="373" width="311" height="189"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="311" id="6Ka-ES-u56"/>
+                        <constraint firstAttribute="height" constant="189" id="mdM-mK-Tcw"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-KP-jF1">
+                    <rect key="frame" x="152" y="585" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="9Sf-zu-JeG"/>
+                        <constraint firstAttribute="height" constant="70" id="L9T-Ys-0it"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2zQ-L8-HMX" firstAttribute="top" secondItem="pCT-Je-fS9" secondAttribute="bottom" constant="8" id="1uw-O4-eMe"/>
+                <constraint firstItem="5i1-k0-pSB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7gs-Ue-xg7"/>
+                <constraint firstItem="pCT-Je-fS9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DXe-Zp-xNX"/>
+                <constraint firstItem="Ctn-li-fx1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E7u-1w-r2C"/>
+                <constraint firstItem="mKK-99-oQ7" firstAttribute="top" secondItem="Ctn-li-fx1" secondAttribute="bottom" constant="8" id="EqM-nk-iNy"/>
+                <constraint firstItem="5i1-k0-pSB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gpy-kA-W7Z"/>
+                <constraint firstItem="flU-jg-WXo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I9z-Lz-2kn"/>
+                <constraint firstAttribute="trailing" secondItem="5i1-k0-pSB" secondAttribute="trailing" id="LQn-QJ-Juo"/>
+                <constraint firstItem="2zQ-L8-HMX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vas-5x-u7q"/>
+                <constraint firstItem="xZD-KP-jF1" firstAttribute="top" secondItem="mKK-99-oQ7" secondAttribute="bottom" constant="23" id="bEi-sO-KRS"/>
+                <constraint firstItem="Ctn-li-fx1" firstAttribute="top" secondItem="flU-jg-WXo" secondAttribute="bottom" constant="6" id="fat-Cc-R8c"/>
+                <constraint firstItem="mKK-99-oQ7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="isu-tp-fDZ"/>
+                <constraint firstItem="flU-jg-WXo" firstAttribute="top" secondItem="2zQ-L8-HMX" secondAttribute="bottom" constant="8" id="qpT-TS-vZD"/>
+                <constraint firstItem="pCT-Je-fS9" firstAttribute="top" secondItem="5i1-k0-pSB" secondAttribute="bottom" constant="6" id="twM-wB-XFT"/>
+                <constraint firstItem="xZD-KP-jF1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yPF-TT-Ea2"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
